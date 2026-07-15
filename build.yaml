@@ -1,3 +1,4 @@
 include:
   - board: xiao_ble
     shield: tan7_v1
+    cmake-args: -DZMK_EXTRA_MODULES=/__w/zmk-config/zmk-config
