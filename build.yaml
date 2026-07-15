@@ -1,3 +1,4 @@
 include:
   - board: xiao_ble
     shield: settings_reset
+    cmake-args: -DCONFIG_ZMK_BOARD_VARIANT=xiao_ble
