@@ -1,4 +1,3 @@
----
 include:
   - board: xiao_ble
-    shield: tan7_v1
+    shield: settings_reset
