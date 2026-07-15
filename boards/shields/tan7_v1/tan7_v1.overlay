@@ -7,17 +7,28 @@
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "col2row";
         row-gpios
-            = <&gpio0  9 (GPIO_ACTIVE_HIGH  | GPIO_PULL_DOWN)>   //D14   P0.09
-            , <&gpio0  4 (GPIO_ACTIVE_HIGH  | GPIO_PULL_DOWN)>   //D4    P0.04
-            , <&gpio0 10 (GPIO_ACTIVE_HIGH  | GPIO_PULL_DOWN)>   //D15   P0.10
-            , <&gpio0  5 (GPIO_ACTIVE_HIGH  | GPIO_PULL_DOWN)>   //D5    P0.05
-            , <&gpio1 11 (GPIO_ACTIVE_HIGH  | GPIO_PULL_DOWN)>   //D6    P1.11
-            , <&gpio1 12 (GPIO_ACTIVE_HIGH  | GPIO_PULL_DOWN)>   //D7    P1.12
+            = <&gpio0 28 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   //R0	ROW1 	D2    P0.28
+            , <&gpio1  1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   //R1	ROW2 	D13   P1.01
+            , <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   //R2	ROW3 	D3    P0.29
+            , <&gpio0  9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   //R3	ROW4 	D14   P0.09
+            , <&gpio0  4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   //R4	ROW5 	D4    P0.04
+            , <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   //R5	ROW6 	D15   P0.10
+            , <&gpio0  5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   //R6	ROW7 	D5    P0.05
+            , <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   //R7	ROW8 	D6    P1.11
+            , <&gpio1 12 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   //R9	ROW9 	D7    P1.12
             ;
 
         col-gpios
-            = <&gpio1 13 GPIO_ACTIVE_HIGH>  //D8    P1.13
-            , <&gpio1  3 GPIO_ACTIVE_HIGH>  //D17   P1.03
+            = <&gpio1 13 GPIO_ACTIVE_HIGH>  //L0	COL_C1	D8    P1.13
+            , <&gpio1  3 GPIO_ACTIVE_HIGH>  //L1	COL_C2	D17   P1.03
+            , <&gpio0  2 GPIO_ACTIVE_HIGH>  //L2	COL_L1	D0    P0.02
+            , <&gpio0 15 GPIO_ACTIVE_HIGH>  //L3	COL_L2	D11   P0.15
+            , <&gpio0  3 GPIO_ACTIVE_HIGH>  //L4	COL_L3	D1    P0.03
+            , <&gpio0 19 GPIO_ACTIVE_HIGH>  //L5	COL_L4	D12   P0.19
+            , <&gpio0  2 GPIO_ACTIVE_HIGH>  //L6	COL_R1	D10   P1.15
+            , <&gpio0 15 GPIO_ACTIVE_HIGH>  //L7	COL_R2	D19   P1.07
+            , <&gpio0  3 GPIO_ACTIVE_HIGH>  //L8	COL_R3	D9    P1.14
+            , <&gpio0 19 GPIO_ACTIVE_HIGH>  //L9	COL_R4	D18   P1.05
             ;
     };
 };
