@@ -3,8 +3,15 @@
 / {
     keymap {
         compatible = "zmk,keymap";
+
         default_layer {
-            bindings = < &kp A >;
+            bindings =
+                <&kp Q &kp W>,
+                <&kp A &kp S>,
+                <&kp Z &kp X>,
+                <&kp C &kp V>,
+                <&kp B &kp N>,
+                <&kp M &kp ENTER>;
         };
     };
 };
