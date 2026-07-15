@@ -1,6 +1,6 @@
-if SHIELD_KATORI
+SHIELD_TAN7_V1
 
 config ZMK_KEYBOARD_NAME
-    default "katori"
+    default "tanzent7"
 
 endif
