@@ -1,6 +1,6 @@
 SHIELD_TAN7_V1
 
 config ZMK_KEYBOARD_NAME
-    default "tanzent7"
+    default "TANZENT7"
 
 endif
