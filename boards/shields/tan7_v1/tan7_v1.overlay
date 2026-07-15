@@ -5,6 +5,6 @@
 
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-direct";
-        input-gpios = <&xiao_d 2 GPIO_ACTIVE_LOW>;
+        input-gpios = <&xiao_d 1 GPIO_ACTIVE_LOW>;
     };
 };
