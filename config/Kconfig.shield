@@ -1,2 +1,0 @@
-config SHIELD_TAN7_V1
-    def_bool $(shields_list_contains,tan7_v1)
