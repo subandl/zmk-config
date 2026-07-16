@@ -160,11 +160,25 @@ physical_layout0: physical_layout_0 {
     };
 
     //gpio_ledsの定義
-    config_rgbled_widget {
-        compatible = "zmk,rgbled-widget";
-        red-gpios = <&gpio0 26 GPIO_ACTIVE_LOW>;
-        green-gpios = <&gpio0 30 GPIO_ACTIVE_LOW>;
-        blue-gpios = <&gpio0 6 GPIO_ACTIVE_LOW>;
+    //ライブラリが探せるように「ニックネーム（エイリアス）」を登録します
+    aliases {
+        led-red = &led_red_node;
+        led-green = &led_green_node;
+        led-blue = &led_blue_node;
+    };
+
+    //XIAOのLEDピンの定義本体です（名前をエイリアスと紐付けました）
+    leds {
+        compatible = "gpio-leds";
+        led_red_node: led_0 {
+            gpios = <&gpio0 26 GPIO_ACTIVE_LOW>;
+        };
+        led_green_node: led_1 {
+            gpios = <&gpio0 30 GPIO_ACTIVE_LOW>;
+        };
+        led_blue_node: led_2 {
+            gpios = <&gpio0 6 GPIO_ACTIVE_LOW>;
+        };
     };
 
 
