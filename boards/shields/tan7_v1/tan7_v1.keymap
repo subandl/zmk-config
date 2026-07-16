@@ -3,6 +3,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <behaviors/rgbled_widget.dtsi>  //バッテリーウィジット
 
 / {
    keymap {
@@ -18,11 +19,11 @@
         //           | 68 | 69 | 70 | 71 | 72 | 73 | | 74 | 75 | 76 | 77 | 78 | | 79 | 80 | 81 | 82 | 83 | 84 |
 
         bindings = <
-            &none   &none   &none   &none   &none   &none   &none   &none                  &none                   &none   &none   &none   &none  &none   &none   &none   &none  
-            &none   &none   &none   &none   &none   &none   &none   &none                                          &none   &none   &none   &none  &none   &none   &none   &none 
-                    &none   &none   &none   &none   &none   &none   &none          &kp N1  &kp N2  &kp N3          &none   &none   &none   &none  &none   &none   &none
-                    &none   &none   &none   &none   &none   &none   &none  &kp N4  &kp N5          &kp N6  &kp N7  &none   &none   &none   &none  &none   &none   &none
-                            &none   &none   &none   &none   &none   &none  &kp N8  &kp N9  &kp N0  &kp A   &kp B   &none   &none   &none   &none  &none   &none
+            &none   &none   &none   &none   &none   &none   &none   &none                  &none                    &none   &none   &none   &none  &none   &none   &none   &none  
+            &none   &none   &none   &none   &none   &none   &none   &none                                           &none   &none   &none   &none  &none   &none   &none   &none 
+                    &none   &none   &none   &none   &none   &none   &none          &kp N1  &kp N2  &kp N3           &none   &none   &none   &none  &none   &none   &none
+                    &none   &none   &none   &none   &none   &none   &none  &kp N4  &kp N5          &kp N6  &kp N7   &none   &none   &none   &none  &none   &none   &none
+                            &none   &none   &none   &none   &none   &none  &kp N8  &kp N9  &kp N0  &kp A   &ind_bat &none   &none   &none   &none  &none   &none
             >;
         };
     };
