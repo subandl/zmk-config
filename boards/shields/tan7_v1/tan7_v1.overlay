@@ -64,7 +64,7 @@
         >;
     };
 
-physical_layout0: physical_layout_0 {
+    physical_layout0: physical_layout_0 {
         compatible = "zmk,physical-layout";
         display-name = "LAYOUT";
 
@@ -182,7 +182,6 @@ physical_layout0: physical_layout_0 {
         };
     };
 
-
     // 2. P1.10ピンをSPIのデータ出力ピン（MOSI）に指定
     &pinctrl {
         spi3_default: spi3_default {
@@ -203,17 +202,10 @@ physical_layout0: physical_layout_0 {
             compatible = "worldsemi,ws2812-spi";
             reg = <0>;
             spi-max-frequency = <4000000>;
-            chain-length = <12>;       // 👈 重要：キー（LED）の総数に変えてください（例：7個なら7）
+            chain-length = <12>;       // 重要：キー（LED）の総数に変えてください（例：7個なら7）
             spi-one-frame = <0x70>;
             spi-zero-frame = <0x40>;
             color-mapping = <LED_COLOR_CHANNELS_GRB>; // SK6812MINI-Eの標準的な色配列
         };
     };
-
-
-
-
-
-
-
 };
