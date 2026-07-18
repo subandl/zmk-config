@@ -19,6 +19,12 @@
         zmk,underglow = &led_strip;  // 1. LED制御の対象（アンダーグロー）として登録
     };
 
+    // LED電源制御。エンコーダーで使うP1.00をダミーピンとして共有
+    ext-power {
+        compatible = "zmk,ext-power-generic";
+        control-gpios = <&gpio1 0 GPIO_ACTIVE_HIGH>; 
+    };
+
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "col2row";
