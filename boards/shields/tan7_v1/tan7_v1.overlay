@@ -218,6 +218,13 @@
         spi-one-frame = <0x70>;
         spi-zero-frame = <0x40>;
         color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
+        led-positions = <
+            84  84  84  84  84  84  84  84          84           84  84  84  84  84  84  84  84  
+            84  84  84  84  84  84  84  84                       84  84  84  84  84  84  84  84 
+                84  84  84  84  84  84  84       2   1   0       84  84  84  84  84  84  84
+                84  84  84  84  84  84  84   3   4       5   6   84  84  84  84  84  84  84
+                    84  84  84  84  84  84  11  10   9   8   7   84  84  84  84  84  84
+        >;
     };
 };
 &pinctrl {
