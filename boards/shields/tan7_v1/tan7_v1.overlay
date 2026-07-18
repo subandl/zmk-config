@@ -4,6 +4,8 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <physical_layouts.dtsi>
 
+#include <dt-bindings/led/led.h> 
+
 &xiao_serial { status = "disabled"; };
 
 
@@ -210,7 +212,7 @@
         chain-length = <12>; // 12個に正しく設定されています
         spi-one-frame = <0x70>;
         spi-zero-frame = <0x40>;
-        color-mapping = <LED_COLOR_CHANNELS_GRB>;
+        color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
     };
 };
 &pinctrl {
