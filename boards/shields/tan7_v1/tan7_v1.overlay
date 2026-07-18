@@ -179,33 +179,36 @@
         };
         led_blue_node: led_2 {
             gpios = <&gpio0 6 GPIO_ACTIVE_LOW>;
-        };
+       };
     };
+};
 
-    // 2. P1.10ピンをSPIのデータ出力ピン（MOSI）に指定
-    &pinctrl {
-        spi3_default: spi3_default {
-        group1 {
-            psels = <NRF_PSEL(SPIM_MOSI, 1, 10)>;
-            };
-        };
-    };
 
-    // 3. SPI通信を使ってSK6812MINI-Eを制御する設定
-    &spi3 {
-        compatible = "nordic,nrf-spim";
-        status = "okay";
-        pinctrl-0 = <&spi3_default>;
-        pinctrl-names = "default";
-
-        led_strip: ws2812@0 {
-            compatible = "worldsemi,ws2812-spi";
-            reg = <0>;
-            spi-max-frequency = <4000000>;
-            chain-length = <12>;       // 重要：キー（LED）の総数に変えてください（例：7個なら7）
-            spi-one-frame = <0x70>;
-            spi-zero-frame = <0x40>;
-            color-mapping = <LED_COLOR_CHANNELS_GRB>; // SK6812MINI-Eの標準的な色配列
+// &がついている物は、/ { }: の外に置く
+// P1.10ピンをSPIのデータ出力ピン（MOSI）に指定
+&pinctrl {
+    spi3_default: spi3_default {
+    group1 {
+        psels = <NRF_PSEL(SPIM_MOSI, 1, 10)>;
         };
     };
 };
+
+// 3. SPI通信を使ってSK6812MINI-Eを制御する設定
+&spi3 {
+    compatible = "nordic,nrf-spim";
+    status = "okay";
+    pinctrl-0 = <&spi3_default>;
+    pinctrl-names = "default";
+
+    led_strip: ws2812@0 {
+        compatible = "worldsemi,ws2812-spi";
+        reg = <0>;
+        spi-max-frequency = <4000000>;
+        chain-length = <12>;       // 重要：キー（LED）の総数に変えてください（例：7個なら7）
+         spi-one-frame = <0x70>;
+        spi-zero-frame = <0x40>;
+        color-mapping = <LED_COLOR_CHANNELS_GRB>; // SK6812MINI-Eの標準的な色配列
+    };
+};
+
