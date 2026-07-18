@@ -179,17 +179,19 @@
         };
         led_blue_node: led_2 {
             gpios = <&gpio0 6 GPIO_ACTIVE_LOW>;
-       };
+        };
     };
 };
 
 
-// &がついている物は、/ { }: の外に置く
-// P1.10ピンをSPIのデータ出力ピン（MOSI）に指定
+
+// &pinctrl のようなアンプサンド（&）が付いた記述は、すでに別のファイルで定義されているノードを「上書き・追加（リファレンス）」するための構文です。
+// これは必ずルートノード（/ { ... };）の外に記述しなければなりません。
+// 2. P1.10ピンをSPIのデータ出力ピン（MOSI）に指定
 &pinctrl {
     spi3_default: spi3_default {
-    group1 {
-        psels = <NRF_PSEL(SPIM_MOSI, 1, 10)>;
+        group1 {
+            psels = <NRF_PSEL(SPIM_MOSI, 1, 10)>;
         };
     };
 };
@@ -205,10 +207,16 @@
         compatible = "worldsemi,ws2812-spi";
         reg = <0>;
         spi-max-frequency = <4000000>;
-        chain-length = <12>;       // 重要：キー（LED）の総数に変えてください（例：7個なら7）
-         spi-one-frame = <0x70>;
+        chain-length = <12>; // 12個に正しく設定されています
+        spi-one-frame = <0x70>;
         spi-zero-frame = <0x40>;
-        color-mapping = <LED_COLOR_CHANNELS_GRB>; // SK6812MINI-Eの標準的な色配列
+        color-mapping = <LED_COLOR_CHANNELS_GRB>;
     };
 };
-
+&pinctrl {
+    spi3_default: spi3_default {
+        group1 {
+            psels = <NRF_PSEL(SPIM_MOSI, 1, 10)>;
+        };
+    };
+};
