@@ -19,13 +19,14 @@
         //      | 50 | 51 | 52 | 53 | 54 | 55 | 56 | | 57 | 58 |    | 59 | 60 | | 61 | 62 | 63 | 64 | 65 | 66 | 67 |
         //           | 68 | 69 | 70 | 71 | 72 | 73 | | 74 | 75 | 76 | 77 | 78 | | 79 | 80 | 81 | 82 | 83 | 84 |
 
-        bindings = <
+         bindings = <
             &none   &none   &none   &none   &none   &none   &none   &none                                    &none                                       &none   &none   &none   &none  &none   &none   &none   &none  
             &none   &none   &none   &none   &none   &none   &none   &none                                                                                &none   &none   &none   &none  &none   &none   &none   &none 
                     &none   &none   &none   &none   &none   &none   &none                   &kp N1           &kp N2           &kp N3                     &none   &none   &none   &none  &none   &none   &none
                     &none   &none   &none   &none   &none   &none   &none  &kp N4           &kp N5           &kp N6           &kp N7                     &none   &none   &none   &none  &none   &none   &none
                             &none   &none   &none   &none   &none   &none  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &ind_bat  &none   &none   &none   &none  &none   &none
             >;
+        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };
 };
