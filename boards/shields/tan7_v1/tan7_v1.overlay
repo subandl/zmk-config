@@ -36,24 +36,6 @@
         steps = <80>; // 1クリックで1回しっかり反応させるためのZMK推奨値（通常の15〜24クリック用）
     };
 
-    behaviors {
-        // 通常時は「?」、Shift時は「!」
-        mo_slex: slash_exclamation {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp SLASH>, <&kp EXCLAMATION>; // 通常は「/」だがJISなので「？」、Shift時は「！」
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        // 通常時は「-」、Shift時は「~」
-        mo_miti: minus_tilde {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp MINUS>, <&kp TILDE>; // 通常は「-」、Shift時はJISの「~」へ自動変換
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-    };
-
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "col2row";
