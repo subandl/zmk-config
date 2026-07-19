@@ -1,6 +1,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/keys_jis.h> 
 #include <dt-bindings/zmk/modifiers.h>
 
 #include <dt-bindings/zmk/mouse.h>
@@ -14,14 +15,14 @@
         mo_slex: slash_exclamation {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp SLASH>, <&kp EXCLAMATION>; // 通常は「/」だがJISなので「？」、Shift時は「！」
+            bindings = <&kp JIS_QUESTION>, <&kp EXCLAMATION>; // 通常は「/」だがJISなので「？」、Shift時は「！」
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         // 通常時は「-」、Shift時は「~」
         mo_miti: minus_tilde {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp MINUS>, <&kp TILDE>; // 通常は「-」、Shift時はJISの「~」へ自動変換
+            bindings = <&kp JIS_MINUS>, <&kp JIS_TILDE>; // 通常は「-」、Shift時はJISの「~」へ自動変換
             mods = <(MOD_LSFT|MOD_RSFT)>;
        };
    };
