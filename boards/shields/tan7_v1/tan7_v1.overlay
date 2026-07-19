@@ -18,8 +18,6 @@
         zmk,physical-layout = &physical_layout0;
         zmk,underglow = &led_strip;  // 1. LED制御の対象（アンダーグロー）として登録
         zmk,sensors = <&encoder>;
-        zmk,input-listeners = <&sensor_input_listener>;
-
     };
 
     // LED電源制御。エンコーダーで使うP1.00をダミーピンとして共有
@@ -30,8 +28,8 @@
 
     encoder: encoder {
         compatible = "alps,ec11";
-        a-gpios = <&gpio0 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; // P0.16 (内蔵プルアップON)
-        b-gpios = <&gpio1  0 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; // P1.00 (内蔵プルアップON)
+        a-gpios = <&gpio0 16 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // P0.16 (内蔵プルアップON)
+        b-gpios = <&gpio1  0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // P1.00 (内蔵プルアップON)
         steps = <80>; // 1クリックで1回しっかり反応させるためのZMK推奨値（通常の15〜24クリック用）
     };
 
@@ -87,6 +85,8 @@
         display-name = "Default Layout";
         transform = <&matrix_transform0>;
         kscan = <&kscan0>;
+
+        sensors = <&encoder>;
 
         keys  //                     w   h    x    y     rot    rx    ry
             = <&key_physical_attrs 150 100    0    0     700     0     0>
