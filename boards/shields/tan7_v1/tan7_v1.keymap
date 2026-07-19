@@ -22,7 +22,7 @@
          bindings = <
             &none   &none   &none   &none   &none   &none   &none   &none                                    &none                                       &none   &none   &none   &none  &none   &none   &none   &none  
             &none   &none   &none   &none   &none   &none   &none   &none                                                                                &none   &none   &none   &none  &none   &none   &none   &none 
-                    &none   &none   &none   &none   &none   &none   &none                   &kp N1           &kp N2           &kp N3                     &none   &none   &none   &none  &none   &none   &none
+                    &none   &none   &none   &none   &none   &none   &none                   &kp ck_qm_ex     &kp LSHFT        &kp ck_mi_ti               &none   &none   &none   &none  &none   &none   &none
                     &none   &none   &none   &none   &none   &none   &none  &kp N4           &kp N5           &kp N6           &kp N7                     &none   &none   &none   &none  &none   &none   &none
                             &none   &none   &none   &none   &none   &none  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &ind_bat  &none   &none   &none   &none  &none   &none
             >;
