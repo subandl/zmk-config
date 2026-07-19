@@ -38,7 +38,7 @@
 
     behaviors {
         // 通常時は「?」、Shift時は「!」
-        ck_qm_ex: ck_qm_ex {
+        mo_slex: slash_exclamation {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp SLASH>, <&kp EXCLAMATION>; // 通常は「/」だがJISなので「？」、Shift時は「！」
@@ -46,7 +46,7 @@
         };
 
         // 通常時は「-」、Shift時は「~」
-        ck_mi_ti: ck_mi_ti {
+        mo_miti: minus_tilde {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp MINUS>, <&kp TILDE>; // 通常は「-」、Shift時はJISの「~」へ自動変換
