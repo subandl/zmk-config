@@ -34,8 +34,8 @@
 
     encoder: encoder {
         compatible = "alps,ec11";
-        a-gpios = <&gpio0 16 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // P0.16 (内蔵プルアップON)
-        b-gpios = <&gpio1  0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // P1.00 (内蔵プルアップON)
+        a-gpios = <&gpio1  0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // P0.16 (内蔵プルアップON)
+        b-gpios = <&gpio. 16 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // P1.00 (内蔵プルアップON)
         steps = <80>; // 1クリックで1回しっかり反応させるためのZMK推奨値（通常の15〜24クリック用）
     };
 
