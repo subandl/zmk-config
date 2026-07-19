@@ -26,6 +26,12 @@
         control-gpios = <&gpio1 7 GPIO_ACTIVE_HIGH>; 
     };
 
+    sensors: sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&encoder>;
+        triggers-per-rotation = <24>; //通常のEC11であれば「24」にするのがおすすめです
+    };
+
     encoder: encoder {
         compatible = "alps,ec11";
         a-gpios = <&gpio0 16 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>; // P0.16 (内蔵プルアップON)
