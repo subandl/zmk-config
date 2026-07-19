@@ -9,6 +9,23 @@
 #include <dt-bindings/zmk/rgb.h>         //LEDキースイッチ制御
 
 / {
+   behaviors {
+        // 通常時は「?」、Shift時は「!」
+        mo_slex: slash_exclamation {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp SLASH>, <&kp EXCLAMATION>; // 通常は「/」だがJISなので「？」、Shift時は「！」
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        // 通常時は「-」、Shift時は「~」
+        mo_miti: minus_tilde {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>, <&kp TILDE>; // 通常は「-」、Shift時はJISの「~」へ自動変換
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+       };
+   };
+
    keymap {
         compatible = "zmk,keymap";
 
@@ -24,7 +41,7 @@
          bindings = <
             &none   &none   &none   &none   &none   &none   &none   &none                                    &none                                       &none   &none   &none   &none  &none   &none   &none   &none  
             &none   &none   &none   &none   &none   &none   &none   &none                                                                                &none   &none   &none   &none  &none   &none   &none   &none 
-                    &none   &none   &none   &none   &none   &none   &none                   &kp LSHIFT       &kp LSHIFT       &kp LSHIFT                 &none   &none   &none   &none  &none   &none   &none
+                    &none   &none   &none   &none   &none   &none   &none                   &mo_slex         &kp LSHIFT       &mo_miti                   &none   &none   &none   &none  &none   &none   &none
                     &none   &none   &none   &none   &none   &none   &none  &kp N4           &kp N5           &kp N6           &kp N7                     &none   &none   &none   &none  &none   &none   &none
                             &none   &none   &none   &none   &none   &none  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &ind_bat  &none   &none   &none   &none  &none   &none
             >;
