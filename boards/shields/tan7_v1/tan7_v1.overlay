@@ -8,7 +8,8 @@
 
 &xiao_serial { status = "disabled"; };
 
-
+#include <dt-bindings/zmk/keys.h>      // キーコード用の定義
+#include <dt-bindings/zmk/modifiers.h> // さまざまな動作バインディングに使用されるすべてのキーコード (例A: 、N1、C_PLAY) と修飾子 (例: )の定義を取り込みます。LSHIFT
 
 
 / {
