@@ -41,7 +41,7 @@
 
     behaviors {
         // 通常時は「?」、Shift時は「!」
-        customkeys_qm_excl: customkeys_qm_excl {
+        ck_qm_ex: ck_qm_ex {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp SLASH>, <&kp EXCLAMATION>; // 通常は「/」だがJISなので「？」、Shift時は「！」
@@ -49,7 +49,7 @@
         };
 
         // 通常時は「-」、Shift時は「~」
-        customkeys_minus_tilde: customkeys_minus_tilde {
+        ck_mi_ti: ck_mi_ti {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp MINUS>, <&kp TILDE>; // 通常は「-」、Shift時はJISの「~」へ自動変換
