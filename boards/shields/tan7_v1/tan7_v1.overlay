@@ -18,6 +18,7 @@
         zmk,physical-layout = &physical_layout0;
         zmk,underglow = &led_strip;  // 1. LED制御の対象（アンダーグロー）として登録
         zmk,sensors = <&encoder>;
+        zmk,input-listeners = <&sensor_input_listener>;
 
     };
 
