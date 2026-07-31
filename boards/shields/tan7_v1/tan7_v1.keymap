@@ -38,7 +38,7 @@
         //           | 68 | 69 | 70 | 71 | 72 | 73 | | 74 | 75 | 76 | 77 | 78 | | 79 | 80 | 81 | 82 | 83 | 84 |
 
          bindings = <
-            &none   &none   &none   &none   &none   &none   &none   &none                                    &none                                             &kp N6       &kp N7   &kp N8      &kp N9        &kp N0     &kp MINUS     &ko EQUAL   &kp BACKSPACE
+            &none   &none   &none   &none   &none   &none   &none   &none                                    &none                                             &kp N6       &kp N7   &kp N8      &kp N9        &kp N0     &kp MINUS     &kp EQUAL   &kp BACKSPACE
             &none   &none   &none   &none   &none   &none   &none   &none                                                                                      &kp Y        &kp U    &kp I       &kp O         &kp P      &kp LBKT      &kp RBKT    &kp BSLH
                     &none   &none   &none   &none   &none   &none   &none                   &mo_miti         &kp LSHIFT       &mo_slex                         &kp H        &kp J    &kp K       &kp L         &kp SEMI   &kp SQT       &kp ENTER
                     &none   &none   &none   &none   &none   &none   &none  &kp N4           &kp N5           &kp N6           &ind_bat                         &kp N        &kp M    &kp COMMA   &kp DOT       &kp FSLH   &kp INT_RO    &kp RSHIFT
