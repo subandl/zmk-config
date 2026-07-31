@@ -56,10 +56,10 @@
             , <&gpio0 15 GPIO_ACTIVE_HIGH>  //L3	COL_L2	D11   P0.15
             , <&gpio0  3 GPIO_ACTIVE_HIGH>  //L4	COL_L3	D1    P0.03
             , <&gpio0 19 GPIO_ACTIVE_HIGH>  //L5	COL_L4	D12   P0.19
-            , <&gpio0  2 GPIO_ACTIVE_HIGH>  //L6	COL_R1	D10   P1.15
-            , <&gpio0 15 GPIO_ACTIVE_HIGH>  //L7	COL_R2	D19   P1.07
-            , <&gpio0  3 GPIO_ACTIVE_HIGH>  //L8	COL_R3	D9    P1.14
-            , <&gpio0 19 GPIO_ACTIVE_HIGH>  //L9	COL_R4	D18   P1.05
+            , <&gpio1 15 GPIO_ACTIVE_HIGH>  //L6	COL_R1	D10   P1.15
+            , <&gpio1  7 GPIO_ACTIVE_HIGH>  //L7	COL_R2	D19   P1.07
+            , <&gpio1 14 GPIO_ACTIVE_HIGH>  //L8	COL_R3	D9    P1.14
+            , <&gpio1  5 GPIO_ACTIVE_HIGH>  //L9	COL_R4	D18   P1.05
             ;
     };
 
