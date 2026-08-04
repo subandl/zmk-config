@@ -75,11 +75,11 @@
 
         layer_3 {
             bindings = <
-&kp  &kp  &kp  &kp  &kp  &kp  &kp  &kp            &kp                      &tog 3  &kp KP_SLASH  &kp KP_ASTERISK  &kp KP_MINUS  &kp  &kp  &kp  &kp
-&kp  &kp  &kp  &kp  &kp  &kp  &kp  &kp                                     &kp N7  &kp N8        &kp N9           &kp KP_PLUS   &kp  &kp  &kp  &kp
-     &kp  &kp  &kp  &kp  &kp  &kp  &kp  &kp       &kp       &kp            &kp N4  &kp N5        &kp N6           &kp KP_ENTER  &kp  &kp  &kp
-     &kp  &kp  &kp  &kp  &kp  &kp  &kp  &kp  &kp       &kp  &kp            &kp N1  &kp N2        &kp N3           &kp SPACE     &kp  &kp  &kp
-          &kp  &kp  &kp  &kp  &kp  &kp  &kp  &kp  &kp  &kp  &kp BACKSPACE  &kp N0  &kp KP_DOT    &kp COMMA        &kp UNDER     &kp  &kp
+&none  &none  &none  &none  &none  &none  &none  &none            &none                      &tog 3  &kp KP_SLASH  &kp KP_ASTERISK  &kp KP_MINUS  &none  &none  &none  &kp
+&none  &none  &none  &none  &none  &none  &none  &none                                     &kp N7  &kp N8        &kp N9           &kp KP_PLUS   &none  &none  &none  &kp
+     &none  &none  &none  &none  &none  &none  &none  &none       &none       &none            &kp N4  &kp N5        &kp N6           &kp KP_ENTER  &none  &none  &kp
+     &none  &none  &none  &none  &none  &none  &none  &none  &none       &none  &none            &kp N1  &kp N2        &kp N3           &kp SPACE     &none  &none  &kp
+          &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &kp BACKSPACE  &kp N0  &kp KP_DOT    &kp COMMA        &kp UNDER     &none  &kp
             >;
         };
 
