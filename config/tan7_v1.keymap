@@ -59,8 +59,6 @@
         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans           &rgb_ug RGB_EFR                   &rgb_ug RGB_EFF  &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &trans  &trans  &trans  &trans           &trans           &trans           &trans           &trans           &trans  &trans  &trans  &trans  &trans  &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp 0 0>;
         };
 
         layer_2 {
@@ -75,11 +73,11 @@
 
         layer_3 {
             bindings = <
-&none  &none  &none  &none  &none  &none  &none  &none            &none                      &tog 3  &kp KP_SLASH  &kp KP_ASTERISK  &kp KP_MINUS  &none  &none  &none  &kp
-&none  &none  &none  &none  &none  &none  &none  &none                                     &kp N7  &kp N8        &kp N9           &kp KP_PLUS   &none  &none  &none  &kp
-     &none  &none  &none  &none  &none  &none  &none  &none       &none       &none            &kp N4  &kp N5        &kp N6           &kp KP_ENTER  &none  &none  &kp
-     &none  &none  &none  &none  &none  &none  &none  &none  &none       &none  &none            &kp N1  &kp N2        &kp N3           &kp SPACE     &none  &none  &kp
-          &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &kp BACKSPACE  &kp N0  &kp KP_DOT    &kp COMMA        &kp UNDER     &none  &kp
+&none  &none  &none  &none  &none  &none  &none  &none            &none                      &tog 3  &kp KP_SLASH  &kp KP_ASTERISK  &kp KP_MINUS  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none  &none                                     &kp N7  &kp N8        &kp N9           &kp KP_PLUS   &none  &none  &none  &none
+     &none  &none  &none  &none  &none  &none  &none  &none       &none       &none            &kp N4  &kp N5        &kp N6           &kp KP_ENTER  &none  &none  &none
+     &none  &none  &none  &none  &none  &none  &none  &none  &none       &none  &none            &kp N1  &kp N2        &kp N3           &kp SPACE     &none  &none  &none
+          &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &kp BACKSPACE  &kp N0  &kp KP_DOT    &kp COMMA        &kp UNDER     &none  &none
             >;
         };
 
