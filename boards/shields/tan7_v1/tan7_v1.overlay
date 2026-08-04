@@ -244,10 +244,9 @@
         reg = <0>;
         spi-max-frequency = <4000000>;
         chain-length = <104>; // 合計LED個数
-        //データ圧縮
-        bits-per-symbol = <4>;
-        spi-one-frame = <0x0e>;  // バイナリ: 1110 (高パルス長め)
-        spi-zero-frame = <0x08>; // バイナリ: 1000 (高パルス短め)
+
+        spi-one-frame = <0x70>;
+        spi-zero-frame = <0x40>;
 
         color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
     };
