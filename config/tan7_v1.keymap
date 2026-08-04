@@ -8,25 +8,19 @@
 / {
     behaviors {
         // 通常時は「?」、Shift時は「!」
-
         mo_slex: slash_exclamation {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LS(SLASH)>, <&kp LS(NUMBER_1)>;
-
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            label = "? !";
         };
 
         // 通常時は「-」、Shift時は「~」
-
         mo_miti: minus_tilde {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp MINUS>, <&kp LS(EQUAL)>;
-
             mods = <(MOD_LSFT|MOD_RSFT)>;
-            label = "- ~";
         };
     };
 
