@@ -97,8 +97,8 @@
   "encoder": {
     "rotary": [
       {
-        "x": 3.0,
-        "y": 0,
+        "x": 1,
+        "y": 10,
         "label": "Encoder 1"
       }
     ]
