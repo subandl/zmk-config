@@ -1,0 +1,51 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h> 
+#include <dt-bindings/zmk/modifiers.h>
+#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/outputs.h>
+#include <behaviors/rgbled_widget.dtsi>  //キースイッチバッテリーウィジット
+#include <dt-bindings/zmk/rgb.h>         //LEDキースイッチ制御
+
+/ {
+   behaviors {
+        // 通常時は「?」、Shift時は「!」
+        mo_slex: slash_exclamation {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(SLASH)>, <&kp LS(NUMBER_1)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        // 通常時は「-」、Shift時は「~」
+        mo_miti: minus_tilde {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>, <&kp LS(EQUAL)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+       };
+   };
+
+   keymap {
+        compatible = "zmk,keymap";
+
+        default_layer { // Layer 0
+            display-name = "Base";
+
+        // |  0 |  1 |  2 |  3 |  4 |  5 |  6 |  7 |           |  8 |         | |  9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 
+        // | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 |                          | | 25 | 26 | 27 | 28 | 29 | 30 | 31 | 32 |
+        //      | 33 | 34 | 35 | 36 | 37 | 38 | 39 |      | 40 | 41 | 42 |    | | 43 | 44 | 45 | 46 | 47 | 48 | 49 |
+        //      | 50 | 51 | 52 | 53 | 54 | 55 | 56 | | 57 | 58 |    | 59 | 60 | | 61 | 62 | 63 | 64 | 65 | 66 | 67 |
+        //           | 68 | 69 | 70 | 71 | 72 | 73 | | 74 | 75 | 76 | 77 | 78 | | 79 | 80 | 81 | 82 | 83 | 84 |
+
+         bindings = <
+            &none   &none   &none   &kp N1  &kp N2  &kp N3  &kp N4          &kp N5                                                &none                                                &kp N6       &kp N7   &kp N8      &kp N9        &kp N0     &kp MINUS     &kp EQUAL   &kp BACKSPACE
+            &none   &none   &none   &kp Q   &kp W   &kp E   &kp R           &kp T                                                                                                      &kp Y        &kp U    &kp I       &kp O         &kp P      &kp LBKT      &kp RBKT    &kp BSLH
+                    &none   &none   &kp A   &kp S   &kp D   &kp F           &kp G                                &mo_miti         &kp UP           &mo_slex                            &kp H        &kp J    &kp K       &kp L         &kp SEMI   &kp SQT       &kp ENTER
+                    &none   &none   &kp Z   &kp X   &kp C   &kp V           &kp B               &kp N4           &kp LEFT                          &kp RIGHT           &ind_bat        &kp N        &kp M    &kp COMMA   &kp DOT       &kp FSLH   &kp INT_RO    &kp RSHIFT
+                            &none   &none   &none   &none   &kp BACKSPACE   &kp ENTER   &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp DOWN         &rgb_ug RGB_EFR     &kp BACKSPACE   &kp SPACE    &kp INT_HENKAN       &kp INT_YEN   &kp RALT   &kp K_APP     &kp RCTRL
+            >;
+            //サンプル &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_TOG  &rgb_ug RGB_EFR &ind_bat
+        sensor-bindings = <&inc_dec_kp N8 N9>;      //sensor-bindings = <BINDING [CW_KEY] [CCW_KEY]>;
+        };
+    };
+};
