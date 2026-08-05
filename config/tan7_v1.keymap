@@ -29,8 +29,8 @@
 
         mo_at_equal: mo_at_equal {
             compatible = "zmk,behavior-mod-morph";
-            label = "MO_AT_EQUAL";
-            bindings = <&kp AT_SIGN>, <&kp EQUAL>;
+            label = "@";
+            bindings = <&kp LBKT>, <&kp LS(MINUS)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -50,11 +50,11 @@
             //           | 68 | 69 | 70 | 71 | 72 | 73 | | 74 | 75 | 76 | 77 | 78 | | 79 | 80 | 81 | 82 | 83 | 84 |
 
             bindings = <
-&kp ESCAPE  &none           &none      &kp N1        &kp N2        &kp N3  &kp N4     &kp N5                                 &none                               &kp N6     &kp N7          &kp N8       &kp N9    &kp N0     &kp FSLH    &kp EQUAL        &kp DELETE
-&kp F2      &kp INSERT      &none      &kp Q         &kp L         &kp U   &kp COMMA  &kp PERIOD                                                                 &kp F      &kp W           &kp R        &kp Y     &kp P      &kp LBKT    &kp RBKT         &kp BSLH
-            &kp TAB         &none      &kp E         &kp I         &kp A   &kp O      &mo_miti       &mo_at_equal            &kp UP               &mo_slex       &kp K      &kp T           &kp N        &kp S     &kp H      &kp SQT     &kp ENTER
-            &kp LEFT_SHIFT  &none      &kp Z         &kp X         &kp C   &kp V      &kp SEMICOLON  &mo 1         &kp LEFT            &kp RIGHT  &mo 4          &kp G      &kp D           &kp M        &kp J     &kp B      &kp INT_RO  &kp RIGHT_SHIFT
-                            &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &none   &kp INT5   &kp ENTER      &kp LSHFT     &mo 2     &kp DOWN  &mo 3      &kp BACKSPACE  &kp SPACE  &kp INT_HENKAN  &kp INT_YEN  &kp RALT  &kp K_APP  &kp RCTRL
+&kp ESCAPE  &kp PRINTSCREEN  &none      &kp N1        &kp N2        &kp N3  &kp N4     &kp N5                                 &none                               &kp N6     &kp N7          &kp N8       &kp N9    &kp N0     &kp FSLH    &kp EQUAL        &kp DELETE
+&kp F2      &kp INSERT       &none      &kp Q         &kp L         &kp U   &kp COMMA  &kp PERIOD                                                                 &kp F      &kp W           &kp R        &kp Y     &kp P      &kp LBKT    &kp RBKT         &kp BSLH
+            &kp TAB          &none      &kp E         &kp I         &kp A   &kp O      &mo_miti       &mo_at_equal            &kp UP               &mo_slex       &kp K      &kp T           &kp N        &kp S     &kp H      &kp SQT     &kp ENTER
+            &kp LEFT_SHIFT   &none      &kp Z         &kp X         &kp C   &kp V      &kp SEMICOLON  &mo 1         &kp LEFT            &kp RIGHT  &mo 4          &kp G      &kp D           &kp M        &kp J     &kp B      &kp INT_RO  &kp RIGHT_SHIFT
+                             &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &none   &kp INT5   &kp ENTER      &kp LSHFT     &mo 2     &kp DOWN  &mo 3      &kp BACKSPACE  &kp SPACE  &kp INT_HENKAN  &kp INT_YEN  &kp RALT  &kp K_APP  &kp RCTRL
             >;
 
             //サンプル &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_TOG  &rgb_ug RGB_EFR &ind_bat
