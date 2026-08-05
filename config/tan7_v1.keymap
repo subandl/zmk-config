@@ -41,11 +41,11 @@
             //           | 68 | 69 | 70 | 71 | 72 | 73 | | 74 | 75 | 76 | 77 | 78 | | 79 | 80 | 81 | 82 | 83 | 84 |
 
             bindings = <
-&kp ESCAPE  &none           &none      &kp N1        &kp N2        &kp N3  &kp N4    &kp N5                          &none                               &kp N6     &kp N7          &kp N8       &kp N9    &kp N0     &kp MINUS   &kp EQUAL        &kp DELETE
-&kp F2      &kp INSERT      &none      &kp Q         &kp W         &kp E   &kp R     &kp T                                                               &kp Y      &kp U           &kp I        &kp O     &kp P      &kp LBKT    &kp RBKT         &kp BSLH
-            &kp TAB         &none      &kp A         &kp S         &kp D   &kp F     &kp G      &mo_miti             &kp UP               &mo_slex       &kp H      &kp J           &kp K        &kp L     &kp SEMI   &kp SQT     &kp ENTER
-            &kp LEFT_SHIFT  &none      &kp Z         &kp X         &kp C   &kp V     &kp B      &mo 1      &kp LEFT            &kp RIGHT  &mo 4          &kp N      &kp M           &kp COMMA    &kp DOT   &kp FSLH   &kp INT_RO  &kp RIGHT_SHIFT
-                            &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &none   &kp INT5  &kp ENTER  &kp LSHFT  &mo 2     &kp DOWN  &mo 3      &kp BACKSPACE  &kp SPACE  &kp INT_HENKAN  &kp INT_YEN  &kp RALT  &kp K_APP  &kp RCTRL
+&kp ESCAPE  &none           &none      &kp N1        &kp N2        &kp N3  &kp N4     &kp N5                              &none                               &kp N6     &kp N7          &kp N8       &kp N9    &kp N0     &kp FSLH    &kp EQUAL        &kp DELETE
+&kp F2      &kp INSERT      &none      &kp Q         &kp L         &kp U   &kp COMMA  &kp PERIOD                                                              &kp F      &kp W           &kp R        &kp O     &kp P      &kp LBKT    &kp RBKT         &kp BSLH
+            &kp TAB         &none      &kp E         &kp I         &kp A   &kp O      &mo_miti       &kp MINUS            &kp UP               &mo_slex       &kp K      &kp T           &kp N        &kp S     &kp H      &kp SQT     &kp ENTER
+            &kp LEFT_SHIFT  &none      &kp Z         &kp X         &kp C   &kp V      &kp SEMICOLON  &mo 1      &kp LEFT            &kp RIGHT  &mo 4          &kp G      &kp D           &kp M        &kp J     &kp B      &kp INT_RO  &kp RIGHT_SHIFT
+                            &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &none   &kp INT5   &kp ENTER      &kp LSHFT  &mo 2     &kp DOWN  &mo 3      &kp BACKSPACE  &kp SPACE  &kp INT_HENKAN  &kp INT_YEN  &kp RALT  &kp K_APP  &kp RCTRL
             >;
 
             //サンプル &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_TOG  &rgb_ug RGB_EFR &ind_bat
@@ -93,14 +93,17 @@
             >;
         };
 
-        layer_5 {
+        layer_6 {
+            display-name = "Base";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                  &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                                          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp ESCAPE  &none           &none      &kp N1        &kp N2        &kp N3  &kp N4    &kp N5                          &none                               &kp N6     &kp N7          &kp N8       &kp N9    &kp N0     &kp MINUS   &kp EQUAL        &kp DELETE
+&kp F2      &kp INSERT      &none      &kp Q         &kp W         &kp E   &kp R     &kp T                                                               &kp Y      &kp U           &kp I        &kp O     &kp P      &kp LBKT    &kp RBKT         &kp BSLH
+            &kp TAB         &none      &kp A         &kp S         &kp D   &kp F     &kp G      &mo_miti             &kp UP               &mo_slex       &kp H      &kp J           &kp K        &kp L     &kp SEMI   &kp SQT     &kp ENTER
+            &kp LEFT_SHIFT  &none      &kp Z         &kp X         &kp C   &kp V     &kp B      &mo 1      &kp LEFT            &kp RIGHT  &mo 4          &kp N      &kp M           &kp COMMA    &kp DOT   &kp FSLH   &kp INT_RO  &kp RIGHT_SHIFT
+                            &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &none   &kp INT5  &kp ENTER  &kp LSHFT  &mo 2     &kp DOWN  &mo 3      &kp BACKSPACE  &kp SPACE  &kp INT_HENKAN  &kp INT_YEN  &kp RALT  &kp K_APP  &kp RCTRL
             >;
+
+            sensor-bindings = <&inc_dec_kp K_SCROLL_DOWN K_SCROLL_UP>;
         };
     };
 };
