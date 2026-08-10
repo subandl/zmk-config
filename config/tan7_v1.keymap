@@ -44,7 +44,7 @@
             display-name = "Base";
             bindings = <
 &kp ESCAPE  &kp GRAVE       &kp LA(PRINTSCREEN)  &kp N1        &kp N2        &kp N3  &kp N4    &kp N5                          &none                               &kp N6     &kp N7          &kp N8       &kp N9    &kp N0     &kp MINUS      &kp EQUAL        &kp DELETE
-&kp F2      &kp INSERT      &kp APOSTROPHE       &kp Q         &kp W         &kp E   &kp R     &kp T                                                               &kp Y      &kp U           &kp I        &kp O     &kp Z      &kp LBKT       &kp RBKT         &kp BSLH
+&kp F2      &kp INSERT      &kp APOSTROPHE       &kp Q         &kp W         &kp E   &kp R     &kp T                                                               &kp Y      &kp U           &kp I        &kp O     &kp AT     &kp COLON      &kp RBKT         &kp BSLH
             &kp TAB         &mo_miti             &kp A         &kp S         &kp D   &kp F     &kp G      &kp LSHFT            &kp UP               &kp RSHFT      &kp H      &kp J           &kp K        &kp L     &kp P      &kp SEMICOLON  &kp ENTER
             &kp LEFT_SHIFT  &kp SLASH            &kp Z         &kp X         &kp C   &kp V     &kp B      &mo 1      &kp LEFT            &kp RIGHT  &mo 4          &kp N      &kp M           &kp COMMA    &kp DOT   &mo_slex   &kp INT_RO     &kp RIGHT_SHIFT
                             &kp LCTRL            &kp LEFT_GUI  &kp LEFT_ALT  &none   &kp INT5  &kp ENTER  &kp LCTRL  &mo 2     &kp DOWN  &mo 3      &kp BACKSPACE  &kp SPACE  &kp INT_HENKAN  &kp INT_YEN  &kp RALT  &kp K_APP  &kp RCTRL
