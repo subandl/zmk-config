@@ -43,11 +43,11 @@
         layer_0 {
             display-name = "Base";
             bindings = <
-&kp ESCAPE  &kp GRAVE       &kp LA(PRINTSCREEN)  &kp N1        &kp N2        &kp N3  &kp N4    &kp N5                          &none                               &kp N6     &kp N7          &kp N8       &kp N9    &kp N0     &kp MINUS      &kp EQUAL        &kp DELETE
-&kp F2      &kp INSERT      &kp APOSTROPHE       &kp Q         &kp W         &kp E   &kp R     &kp T                                                               &kp Y      &kp U           &kp I        &kp O     &kp AT     &kp COLON      &kp RBKT         &kp BSLH
-            &kp TAB         &mo_miti             &kp A         &kp S         &kp D   &kp F     &kp G      &kp LSHFT            &kp UP               &kp RSHFT      &kp H      &kp J           &kp K        &kp L     &kp P      &kp SEMICOLON  &kp ENTER
-            &kp LEFT_SHIFT  &kp SLASH            &kp Z         &kp X         &kp C   &kp V     &kp B      &mo 1      &kp LEFT            &kp RIGHT  &mo 4          &kp N      &kp M           &kp COMMA    &kp DOT   &mo_slex   &kp INT_RO     &kp RIGHT_SHIFT
-                            &kp LCTRL            &kp LEFT_GUI  &kp LEFT_ALT  &none   &kp INT5  &kp ENTER  &kp LCTRL  &mo 2     &kp DOWN  &mo 3      &kp BACKSPACE  &kp SPACE  &kp INT_HENKAN  &kp INT_YEN  &kp RALT  &kp K_APP  &kp RCTRL
+&kp ESCAPE  &kp GRAVE       &none      &kp N1        &kp N2        &kp N3   &kp N4    &kp N5                              &none                               &kp N6     &kp N7          &kp N8       &kp N9    &kp N0            &kp MINUS       &kp EQUAL        &kp DELETE
+&kp F2      &none           &none      &kp Q         &kp W         &kp E    &kp R     &kp T                                                                   &kp Y      &kp U           &kp I        &kp O     &kp LEFT_BRACKET  &kp APOSTROPHE  &kp RBKT         &kp BSLH
+            &kp TAB         &mo_miti   &kp A         &kp S         &kp D    &kp F     &kp G      &kp LSHFT                &kp UP               &kp RSHFT      &kp H      &kp J           &kp K        &kp L     &kp P             &kp SEMICOLON   &kp ENTER
+            &kp LEFT_SHIFT  &kp SLASH  &kp Z         &kp X         &kp C    &kp V     &kp B      &kp BACKSPACE  &kp LEFT            &kp RIGHT  &kp BACKSPACE  &kp N      &kp M           &kp COMMA    &kp DOT   &mo_slex          &kp INT_RO      &kp RIGHT_SHIFT
+                            &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &kp INS  &kp INT5  &kp SPACE  &kp ENTER      &mo 1     &kp DOWN  &mo 2      &kp ENTER      &kp SPACE  &kp INT_HENKAN  &kp INT_YEN  &kp RALT  &kp K_APP         &kp RCTRL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -55,55 +55,22 @@
 
         layer_1 {
             bindings = <
-&none  &none  &none  &none  &none  &none  &none  &bootloader                                    &none                                              &none  &none  &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none  &none  &none                                                                                             &none  &none  &none  &none  &none  &none  &none  &none
-       &none  &none  &none  &none  &none  &none  &none        &rgb_ug RGB_BRD                   &rgb_ug RGB_TOG                   &rgb_ug RGB_BRI  &none  &none  &none  &none  &none  &none  &none
-       &none  &none  &none  &none  &none  &none  &none        &none            &rgb_ug RGB_EFR                   &rgb_ug RGB_EFF  &none            &none  &none  &none  &none  &none  &none  &none
-              &none  &none  &none  &none  &none  &none        &none            &none            &none            &none            &none            &none  &none  &none  &none  &none  &none
+&none  &none     &none            &kp F1           &kp F2           &kp F3               &kp F4           &kp F5                   &none                          &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11      &kp F12  &none
+&none  &none     &none            &none            &none            &none                &none            &none                                                   &none   &none   &none   &none   &none    &none        &none    &none
+       &kp CAPS  &none            &none            &none            &none                &none            &none   &none            &kp PAGE_UP             &none  &none   &none   &none   &none   &none    &none        &none
+       &none     &rgb_ug RGB_TOG  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &rgb_ug RGB_EFR      &rgb_ug RGB_EFF  &none   &none  &kp HOME                 &kp END  &none  &none   &none   &none   &none   &none    &none        &none
+                 &none            &none            &none            &kp LA(PRINTSCREEN)  &none            &none   &none  &none     &kp PAGE_DOWN  &none    &none  &none   &none   &none   &none   &none    &bootloader
             >;
         };
 
         layer_2 {
             bindings = <
-&kp GRAVE  &none     &none  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                   &none                          &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &kp DEL
-&none      &none     &none  &none   &none   &none   &none   &none                                                   &none   &none   &none   &none   &none    &none    &none    &none
-           &kp CAPS  &none  &none   &none   &none   &none   &none   &none            &kp PAGE_UP             &none  &none   &none   &none   &none   &none    &none    &none
-           &none     &none  &none   &none   &none   &none   &none   &none  &kp HOME                 &kp END  &none  &none   &none   &none   &none   &none    &none    &none
-                     &none  &none   &none   &none   &none   &none   &none  &none     &kp PAGE_DOWN  &none    &none  &none   &none   &none   &none   &none    &none
-            >;
-        };
-
-        layer_3 {
-            bindings = <
-&none  &none  &none  &none  &none  &none  &none  &none                &none                        &tog 3  &kp KP_SLASH  &kp KP_ASTERISK  &kp KP_MINUS  &none  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none  &none                &none                        &tog 2  &kp KP_SLASH  &kp KP_ASTERISK  &kp KP_MINUS  &none  &none  &none  &none
 &none  &none  &none  &none  &none  &none  &none  &none                                             &kp N7  &kp N8        &kp N9           &kp KP_PLUS   &none  &none  &none  &none
        &none  &none  &none  &none  &none  &none  &none  &none         &none         &none          &kp N4  &kp N5        &kp N6           &kp KP_ENTER  &none  &none  &none
-       &none  &none  &none  &none  &none  &none  &none  &none  &none         &none  &none          &kp N1  &kp N2        &kp N3           &kp SPACE     &none  &none  &none
-              &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &kp BACKSPACE  &kp N0  &kp KP_DOT    &kp COMMA        &kp UNDER     &none  &none
+       &none  &none  &none  &none  &none  &none  &none  &none  &none         &none  &kp BACKSPACE  &kp N1  &kp N2        &kp N3           &kp SPACE     &none  &none  &none
+              &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &kp ENTER      &kp N0  &kp KP_DOT    &kp COMMA        &kp UNDER     &none  &none
             >;
-        };
-
-        layer_4 {
-            bindings = <
-&none  &none  &none  &none  &none  &none  &none  &none                &none                &none  &none  &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none  &none  &none                                     &none  &none  &none  &none  &none  &none  &none  &none
-       &none  &none  &none  &none  &none  &none  &none  &none         &none         &none  &none  &none  &none  &none  &none  &none  &none
-       &none  &none  &none  &none  &none  &none  &none  &none  &none         &none  &none  &none  &none  &none  &none  &none  &none  &none
-              &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
-            >;
-        };
-
-        layer_5 {
-            display-name = "6";
-            bindings = <
-&kp ESCAPE  &kp PRINTSCREEN  &none      &kp N1        &kp N2        &kp N3  &kp N4     &kp N5                                 &none                               &kp N6     &kp N7          &kp N8       &kp N9    &kp N0     &kp FSLH    &kp EQUAL        &kp DELETE
-&kp F2      &kp INSERT       &none      &kp Q         &kp L         &kp U   &kp COMMA  &kp PERIOD                                                                 &kp F      &kp W           &kp R        &kp Y     &kp P      &kp LBKT    &kp RBKT         &kp BSLH
-            &kp TAB          &none      &kp E         &kp I         &kp A   &kp O      &mo_miti       &mo_at_equal            &kp UP               &mo_slex       &kp K      &kp T           &kp N        &kp S     &kp H      &kp SQT     &kp ENTER
-            &kp LEFT_SHIFT   &none      &kp Z         &kp X         &kp C   &kp V      &kp SEMICOLON  &mo 1         &kp LEFT            &kp RIGHT  &mo 4          &kp G      &kp D           &kp M        &kp J     &kp B      &kp INT_RO  &kp RIGHT_SHIFT
-                             &kp LCTRL  &kp LEFT_GUI  &kp LEFT_ALT  &none   &kp INT5   &kp ENTER      &kp LSHFT     &mo 2     &kp DOWN  &mo 3      &kp BACKSPACE  &kp SPACE  &kp INT_HENKAN  &kp INT_YEN  &kp RALT  &kp K_APP  &kp RCTRL
-            >;
-
-            sensor-bindings = <&inc_dec_kp K_SCROLL_DOWN K_SCROLL_UP>;
         };
     };
 };
